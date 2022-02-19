@@ -3,10 +3,10 @@ import { Routes, RouterModule } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'landing', pathMatch: 'full'
+    path: '', redirectTo: 'layout', pathMatch: 'full'
   },
   {
-    path: 'landing', loadChildren: './landing/landing.module#LandingModule'
+    path: 'layout', loadChildren: './layouts/layouts.module#LayoutsModule'
   },
   { path: "**", redirectTo: "", pathMatch: "full" },
 ];

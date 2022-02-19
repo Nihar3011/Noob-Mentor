@@ -5,6 +5,9 @@
 export const environment = {
   production: false,
 };
+export const REQUEST_URL = 'http://192.168.1.8:3000/';
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file
