@@ -24,7 +24,7 @@ export const URLS = {
     login: '/layout/auth/login',
     register: '/layout/auth/register',
     profile: '/layout/profile',
-    details: '/layout/auth/details'
-
+    details: '/layout/auth/details',
+    chat:'/layout/chat'
 
 };

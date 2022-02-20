@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from "@angular/router";
 import { URLS } from "src/app/shared/constant";
 import { LoginService } from "../../service/login.service";
@@ -21,8 +21,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      email: [''],
-      password: [''],
+      email: ['',[Validators.email,Validators.required]],
+      password: ['',[Validators.required]],
     });
   }
 
@@ -31,17 +31,21 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log('Hiii');
-    console.log(this.loginForm.value);
-
+    // console.log('Hiii');
+    // if(!this.loginForm.valid){
+    //   console.log('error'); // Invalid
+    // }
+    // else{
     const loginFormData = this.loginForm.value;
     loginFormData.role = 'noob';
+    console.log(loginFormData)
     this.loginService.login(loginFormData).subscribe((res: any) => {
       console.log(res);
       localStorage.setItem('access_token', res.data.accessToken);
       localStorage.setItem('refresh_token', res.data.refreshToken);
       this.router.navigateByUrl('/');
     })
+    // }
   }
 
   goToRegister(){

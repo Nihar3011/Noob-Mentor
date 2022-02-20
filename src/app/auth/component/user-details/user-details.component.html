@@ -12,7 +12,21 @@
                             <label class="block uppercase text-black text-xs font-bold mb-2" htmlFor="grid-password">
                                 Photo
                             </label>
-                            <input type="file" id="myfile" name="myfile">
+                            <div style="border: 1px dashed black;display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 200px;
+                            height: 200px;
+                            border-radius: 100%;">
+                                <div class="fa fa-upload" style="position: absolute;text-align: center;
+                              ">
+                                    <p style="    width: 60%;
+                                margin-left: auto;
+                                margin-right: auto;">Choose file or Drag and Drop</p>
+                                </div>
+                                <input class="p-8" type="file" id="myfile" name="myfile">
+
+                            </div>
 
                         </div>
 
@@ -20,9 +34,13 @@
                             <label class="block uppercase text-black text-xs font-bold mb-2" htmlFor="grid-password">
                                 Job Title
                             </label>
-                            <input type="email"
-                                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                placeholder="Email" />
+                            <select class="form-control w-full">
+                                <option disabled>Select Website</option>
+                                <option>ABC</option>
+                                <option>VFD</option>
+
+                                <!-- <option *ngFor="let web of websiteList">{{web}}</option>   -->
+                            </select>
                         </div>
 
                         <div class="relative w-full mb-3">
@@ -31,7 +49,7 @@
                             </label>
                             <input type="text"
                                 class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                placeholder="text" />
+                                placeholder="Organization" />
                         </div>
 
 
@@ -41,15 +59,15 @@
                             </label>
                             <input type="text"
                                 class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                placeholder="text" />
+                                placeholder="About" />
                         </div>
                         <div class="relative w-full mb-3">
-                            <label class="block uppercase text-black text-xs font-bold mb-2" htmlFor="grid-password">
-                                Skils
+                            <label class="block uppercase text-black text-xs  mb-2" htmlFor="grid-password">
+                                <span class="font-bold">Skils </span> <span class="text-light ml-1"> (Enter comma seprated)</span>
                             </label>
                             <input type="text"
                                 class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                placeholder="text" />
+                                placeholder="For example - Angular, JAVA, Python" />
                         </div>
 
                         <!-- 
@@ -70,7 +88,7 @@
                             <button
                                 class="bg-black text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                                 type="button">
-                                Create Account
+                                Submit
                             </button>
                         </div>
                     </form>

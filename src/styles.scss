@@ -4002,3 +4002,8 @@ select {
 
 @media (min-width: 1536px) {
 }
+input[type="file"] {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
