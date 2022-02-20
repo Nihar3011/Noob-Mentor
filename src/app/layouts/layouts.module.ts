@@ -5,6 +5,7 @@ import { AuthNavbarComponent } from './component/auth-navbar/auth-navbar.compone
 import { FooterComponent } from './component/footer/footer.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { LayoutsRoutingModule } from './layouts-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
